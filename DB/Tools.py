@@ -83,7 +83,7 @@ def get_datetime_from_data(date: str):
 
 
 # print(get_datetime_from_str('12 января'))
-# print(get_datetime_from_str('12 ноября'))
+print(get_datetime_from_data('7 октября'))
 # print(get_datetime_from_str('12 февраля'))
 # print(get_datetime_from_str('12 мая'))
 

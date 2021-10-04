@@ -88,8 +88,9 @@ def process_day_step(message):
             chat_id = message.chat.id
             user = user_dict[chat_id]
             user.day = message.text
+            date = str(get_datetime_from_data(message.text))
             for i in user.temp:
-                if i.display()[:-3:-1] == message.text[:2][::-1]:
+                if i.display() == date:
                     user.temp = i.getChildrens()
                     break
             msg = bot.send_message(message.chat.id, "Отлично, выбираем время.",

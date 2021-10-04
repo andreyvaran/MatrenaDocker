@@ -11,6 +11,7 @@ from Answerer.spellCheck import spellCheck
 bot = telebot.TeleBot(config.token)
 
 from DB.MakeDB import delete_DB, Base, engine, post_MFC
+print(1)
 delete_DB()
 Base.metadata.create_all(bind=engine)
 post_MFC()
@@ -83,5 +84,8 @@ def location(message):
                          reply_markup=utils.generate_mainMenu_markup())
 
 
+
+
 if __name__ == "__main__":
+
     bot.infinity_polling()
